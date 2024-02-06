@@ -114,7 +114,7 @@ async def end_battle(ctx):
         await ctx.send("Beat Battle is either not active or not in the voting phase.")
 
 async def post_submissions_for_voting():
-    channel = bot.get_channel(1164855048984076368)
+    channel = bot.get_channel(123)
     await channel.send(f"Voting has started for Beat Battle - {battle_name}! Vote for your favorite beat by reacting to the message.")
     for submission in submissions.values():
         if submission.collaborators:
@@ -126,7 +126,7 @@ async def post_submissions_for_voting():
 
 
 async def announce_winner():
-    channel = bot.get_channel(1164855048984076368)
+    channel = bot.get_channel(123)
     await channel.send(f"Voting has ended for Beat Battle '{battle_name}'! Calculating the winner...")
 
     msg_reactions = {}
